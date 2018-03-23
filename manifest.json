@@ -1,0 +1,6 @@
+{
+  "name": "auiproject",
+  "short_name": "auiproject",
+  "start_url": "/",
+  "display": "standalone"
+}
