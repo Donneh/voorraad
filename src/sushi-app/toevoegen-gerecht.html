@@ -1,0 +1,117 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+
+<dom-module id="toevoegen-gerecht">
+    <template>
+        <style>
+            h1 {
+                font-family: Roboto, sans-serif;
+                font-weight: lighter;
+                margin-bottom: 64px;
+                margin-top: 48px !important;
+            }
+
+            table {
+                font-family: Roboto, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            td, th {
+                border: 1px solid #ddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            .toevoegen {
+                float: right;
+            }
+
+            .ok {
+                margin-left: 84px;
+            }
+
+            paper-input {
+                margin-bottom: 32px;
+            }
+        </style>
+
+        <h1>Gerecht toevoegen</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Gerecht</th>
+                <th>Op menu</th>
+                <th>Bestelbaar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <template is="dom-repeat" items="{{gerechten}}" as="gerecht">
+                <tr>
+                    <td>[[gerecht.gerecht]]</td>
+                    <td>[[gerecht.opMenu]]</td>
+                    <td>[[gerecht.beschikbaar]]</td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+
+        <paper-input label="Naam gerecht:" value="{{naam}}"></paper-input>
+
+        <paper-dialog id="dialoogvenster">
+            <h2>Gerecht is toegevoegd!</h2>
+            <paper-button dialog-confirm raised autofocus class="ok">Oke</paper-button>
+        </paper-dialog>
+
+        <iron-selector selected="[[page]]" attr-for-selected="name" role="navigation">
+            <a name="hoofd-menu" href="[[rootPath]]hoofd-menu">
+                <paper-button>Terug</paper-button>
+            </a>
+        </iron-selector>
+
+        <paper-button raised class="toevoegen" on-click="gerechtToevoegenHandler">Toevoegen</paper-button>
+
+        <app-localstorage-document key="meta" data="{{gerechten}}"></app-localstorage-document>
+    </template>
+
+    <script>
+        class ToevoegenGerecht extends Polymer.Element {
+
+            static get is() { return 'toevoegen-gerecht' }
+
+            static get properties() {
+                return {
+                    gerechten: {
+                        type: Array,
+                        value: [
+                            {gerecht: "Patat", opMenu: "Nee", beschikbaar: "Nee"}
+                        ]
+                    }
+                }
+            }
+
+            gerechtToevoegenHandler() {
+                console.log(this.meta);
+
+                if (this.naam.length >= 1) {
+                    this.push('gerechten', {
+                        gerecht: this.naam,
+                        opMenu: "Nee",
+                        beschikbaar: "Nee"
+                    });
+
+                    this.$.dialoogvenster.open();
+                }
+            }
+        }
+
+        window.customElements.define(ToevoegenGerecht.is, ToevoegenGerecht)
+    </script>
+</dom-module>

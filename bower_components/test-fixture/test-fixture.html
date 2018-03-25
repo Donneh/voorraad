@@ -1,3 +1,4 @@
+<!doctype html>
 <!--
 @license
 Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
@@ -7,345 +8,264 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-
-<!--
-
-The `<test-fixture>` element can simplify the exercise of consistently
-resetting a test suite's DOM. To use it, wrap the test suite's DOM as a template:
-
-```html
-<test-fixture id="SomeElementFixture">
-  <template>
-    <some-element id="SomeElementForTesting"></some-element>
-  </template>
-</test-fixture>
-```
-
-Now, the `<test-fixture>` element can be used to generate a copy of its
-template:
-
-```html
-<script>
-describe('<some-element>', function () {
-  var someElement;
-
-  beforeEach(function () {
-    document.getElementById('SomeElementFixture').create();
-    someElement = document.getElementById('SomeElementForTesting');
-  });
-});
-</script>
-```
-
-Fixtured elements can be cleaned up by calling `restore` on the `<test-fixture>`:
-
-```javascript
-  afterEach(function () {
-    document.getElementById('SomeElementFixture').restore();
-    // <some-element id='SomeElementForTesting'> has been removed
-  });
-```
-
-`<test-fixture>` will create fixtures from all of its immediate `<template>`
-children. The DOM structure of fixture templates can be as simple or as complex
-as the situation calls for.
-
-## Even simpler usage in Mocha
-
-In Mocha, usage can be simplified even further. Include `test-fixture-mocha.js`
-after Mocha in the `<head>` of your document and then fixture elements like so:
-
-```html
-<script>
-describe('<some-element>', function () {
-  var someElement;
-
-  beforeEach(function () {
-    someElement = fixture('SomeElementFixture');
-  });
-});
-</script>
-```
-
-Fixtured elements will be automatically restored in the `afterEach` phase of the
-current Mocha `Suite`.
-
-## Data-bound templates
-
-Data-binding systems are also supported, as long as your (custom) template
-elements define a `stamp(model)` method that returns a document fragment. This
-allows you to stamp out templates w/ custom models for your fixtures.
-
-For example, using Polymer 0.8's `dom-template`:
-
-```html
-<test-fixture id="bound">
-  <template is="dom-template">
-    <span>{{greeting}}</span>
-  </template>
-</test-fixture>
-```
-
-You can pass an optional context argument to `create()` or `fixture()` to pass
-the model:
-
-```js
-var bound = fixture('bound', {greeting: 'ohai thurr'});
-```
-
-## The problem being addressed
-
-Consider the following `web-component-tester` test suite:
-
-```html
-<!doctype html>
 <html>
 <head>
-  <title>some-element test suite</title>
+  <title>test-fixture</title>
 
-  <link rel="import" href="../some-element.html">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <link rel="import" id="test-fixture-import" href="../test-fixture.html">
+  <script src="../test-fixture-mocha.js"></script>
+
+  <script>
+  (function() {
+    function XCustom() {
+      if (window.Reflect) {
+        return Reflect.construct(HTMLElement, [], XCustom);
+      }
+      return HTMLElement.call(this) || this;
+    }
+
+    XCustom.prototype = Object.create(HTMLElement.prototype);
+    Object.defineProperty(XCustom.prototype, 'constructor', {
+      configurable: true,
+      enumerable: true,
+      writable: true,
+      value: XCustom,
+    });
+    XCustom.prototype.onDetached = function() {};
+    XCustom.prototype.disconnectedCallback =
+        XCustom.prototype.detachedCallback = function() {
+          this.onDetached();
+        };
+
+    if (window.customElements) {
+      customElements.define('x-custom', XCustom);
+    } else if (document.registerElement) {
+      document.registerElement('x-custom', {
+        prototype: XCustom.prototype
+      });
+    } else {
+      throw new Error('No custom elements API was found.');
+    }
+  })();
+  </script>
 </head>
 <body>
-  <some-element id="SomeElementForTesting"></some-element>
+  <test-fixture id="TrivialFixture">
+    <template>
+      <div id="Foo"></div>
+    </template>
+  </test-fixture>
+  <test-fixture id="ComplexDomFixture">
+    <template>
+      <div id="Bar">
+        <div id="BarChild"></div>
+      </div>
+      <div id="BarSibling"></div>
+    </template>
+  </test-fixture>
+  <test-fixture id="MultiTemplateFixture">
+    <template>
+      <div id="Baz"></div>
+    </template>
+    <template>
+      <div id="Qux"></div>
+      <div id="QuxSibling"></div>
+    </template>
+  </test-fixture>
+  <test-fixture id="CommentedSingleChildFixture">
+    <template>
+      <!-- comment -->
+      <!-- comment -->
+      <div id="Foo"></div>
+      <!-- comment -->
+    </template>
+  </test-fixture>
+  <test-fixture id="CommentedMultiChildFixture">
+    <template>
+      <!-- comment -->
+      <div id="Bar">
+        <div id="BarChild"></div>
+      </div>
+      <!-- comment -->
+      <!-- comment -->
+      <div id="BarSibling"></div>
+      <!-- comment -->
+      <div id="Baz"></div>
+    </template>
+  </test-fixture>
+  <test-fixture id="AttachedFixture">
+    <template>
+      <x-custom></x-custom>
+    </template>
+  </test-fixture>
   <script>
-describe('<some-element>', function () {
-  var someElement;
+describe('test-fixture import', function() {
+  it('loads from test-fixture import', function() {
+    var importNode = document.getElementById('test-fixture-import');
+    expect(importNode.import).to.not.be.null;
+  });
+});
+describe('<test-fixture>', function () {
+  var trivialFixture;
+  var complexDomFixture;
+  var multiTemplateFixture;
+  var commentedSingleChildFixture;
+  var commentedMultiChildFixture;
 
   beforeEach(function () {
-    someElement = document.getElementById('SomeElementForTesting');
+    trivialFixture = document.getElementById('TrivialFixture');
+    complexDomFixture = document.getElementById('ComplexDomFixture');
+    multiTemplateFixture = document.getElementById('MultiTemplateFixture');
+    commentedSingleChildFixture = document.getElementById('CommentedSingleChildFixture');
+    commentedMultiChildFixture = document.getElementById('CommentedMultiChildFixture');
   });
 
-  it('can receive property `foo`', function () {
-    someElement.foo = 'bar';
-    expect(someElement.foo).to.be.equal('bar');
+  afterEach(function () {
+    trivialFixture.restore();
+    complexDomFixture.restore();
+    multiTemplateFixture.restore();
+    commentedSingleChildFixture.restore();
+    commentedMultiChildFixture.restore();
   });
 
-  it('has a default `foo` value of `undefined`', function () {
-    expect(someElement.foo).to.be.equal(undefined);
+  describe('an stamped-out fixture', function () {
+    var attachedFixture;
+    var element;
+
+    beforeEach(function () {
+      attachedFixture = document.getElementById('AttachedFixture');
+      element = attachedFixture.create();
+    });
+
+    afterEach(function () {
+      attachedFixture.restore();
+    });
+
+    it('detaches the fixtured DOM when it is restored', function () {
+      var detached = false;
+
+      element.onDetached = function () {
+        detached = true;
+      };
+
+      attachedFixture.restore();
+      expect(detached).to.be.eql(true);
+    });
+  });
+
+  describe('when create is called', function () {
+    var el;
+
+    beforeEach(function () {
+      el = trivialFixture.create();
+    });
+
+    it('clones all template fragments within itself', function () {
+      expect(el).to.be.ok;
+      expect(document.getElementById('Foo')).to.be.ok;
+    });
+
+    it('detaches all fixture templates from itself', function () {
+      expect(trivialFixture.querySelectorAll('template').length).to.be.equal(0);
+    });
+
+    describe('and then restore is called', function () {
+      beforeEach(function () {
+        trivialFixture.restore();
+      });
+
+      it('re-attaches all fixture templates', function () {
+        expect(trivialFixture.querySelectorAll('template').length).to.be.equal(1);
+      });
+
+      it('removes all cloned elements from itself', function () {
+        expect(document.getElementById('Foo')).to.not.be.ok;
+      });
+    });
+
+    describe('for a dom with a single root element', function () {
+      it('returns a reference to the root element', function () {
+        expect(el).to.be.instanceOf(HTMLElement);
+      });
+    });
+
+    describe('for a complex dom', function () {
+      var els;
+
+      beforeEach(function () {
+        els = complexDomFixture.create();
+      });
+
+      it('fixtures all the dom elements in the template', function () {
+        expect(document.getElementById('Bar')).to.be.ok;
+        expect(document.getElementById('BarSibling')).to.be.ok;
+        expect(document.getElementById('BarChild')).to.be.ok;
+      });
+
+      it('returns an array of root elements', function () {
+        expect(els).to.be.instanceOf(Array);
+        expect(els[0]).to.be.instanceOf(HTMLElement);
+        expect(els[1]).to.be.instanceOf(HTMLElement);
+      });
+    });
+
+    describe('when there are multiple templates', function () {
+      var groups;
+
+      beforeEach(function () {
+        groups = multiTemplateFixture.create();
+      });
+
+      it('fixtures elements from all of the templates', function () {
+        expect(document.getElementById('Baz')).to.be.ok;
+        expect(document.getElementById('Qux')).to.be.ok;
+      });
+
+      it('returns an array with elements grouped by template', function () {
+        expect(groups).to.be.instanceOf(Array);
+        expect(groups[0]).to.be.instanceOf(HTMLElement);
+        expect(groups[1]).to.be.instanceOf(Array);
+        expect(groups[1][0]).to.be.instanceOf(HTMLElement);
+        expect(groups[1][1]).to.be.instanceOf(HTMLElement);
+      });
+    });
+
+    describe('when there are comments in the template', function() {
+      var el;
+      var els;
+
+      beforeEach(function () {
+        el = commentedSingleChildFixture.create();
+        els = commentedMultiChildFixture.create();
+      });
+
+      it('returns a single element if the template has a single child', function() {
+        expect(el).to.be.instanceOf(HTMLElement);
+      });
+
+      it('returns multiple elements if the template has multiple children', function() {
+        expect(els).to.be.instanceOf(Array);
+        expect(els.length).to.equal(3);
+      });
+    });
+  });
+
+  describe('when the fixture global is called', function () {
+    var el;
+
+    beforeEach(function () {
+      el = fixture('TrivialFixture');
+    });
+
+    it('generates a DOM fragment from the associated fixture', function () {
+      expect(el).to.be.equal(document.getElementById('Foo'));
+    });
   });
 });
   </script>
+
 </body>
 </html>
-```
-
-In this contrived example, the suite will pass or fail depending on which order
-the tests are run in. It is non-deterministic because `someElement` has
-internal state that is not properly reset at the end of each test.
-
-It would be trivial in the above example to simply reset `someElement.foo` to
-the expected default value of `undefined` in an `afterEach` hook. However, for
-non-contrived test suites that target complex elements, this can result in a
-large quantity of ever-growing set-up and tear-down boilerplate.
-
-@pseudoElement test-fixture
- -->
-
-<script>
-
-(function () {
-  var TestFixturePrototype = Object.create(HTMLElement.prototype);
-  var TestFixtureExtension = {
-    _fixtureTemplates: null,
-
-    _elementsFixtured: false,
-
-    get elementsFixtured () {
-      return this._elementsFixtured;
-    },
-
-    get fixtureTemplates () {
-      if (!this._fixtureTemplates) {
-        // Copy fixtures to a true Array for Safari 7. This prevents their
-        // `content` property from being improperly garbage collected.
-        this._fixtureTemplates = Array.prototype.slice.apply(this.querySelectorAll('template'));
-      }
-
-      return this._fixtureTemplates;
-    },
-
-    create: function (model) {
-      var generatedDoms = [];
-
-      this.restore();
-
-      this.removeElements(this.fixtureTemplates);
-
-      this.forElements(this.fixtureTemplates, function (fixtureTemplate) {
-        generatedDoms.push(
-          this.createFrom(fixtureTemplate, model)
-        );
-      }, this);
-
-      this.forcePolyfillAttachedStateSynchrony();
-
-      if (generatedDoms.length < 2) {
-        return generatedDoms[0];
-      }
-
-      return generatedDoms;
-    },
-
-    createFrom: function (fixtureTemplate, model) {
-      var fixturedFragment;
-      var fixturedElements;
-      var fixturedElement;
-
-      if (!(fixtureTemplate &&
-            fixtureTemplate.tagName === 'TEMPLATE')) {
-        return;
-      }
-
-      try {
-        fixturedFragment = this.stamp(fixtureTemplate, model);
-      } catch (error) {
-        console.error('Error stamping', fixtureTemplate, error);
-        throw error;
-      }
-
-      fixturedElements = this.collectElementChildren(fixturedFragment);
-
-      this.appendChild(fixturedFragment);
-      this._elementsFixtured = true;
-
-      if (fixturedElements.length < 2) {
-        return fixturedElements[0];
-      }
-
-      return fixturedElements;
-    },
-
-    restore: function () {
-      if (!this._elementsFixtured) {
-        return;
-      }
-
-      this.removeElements(this.children);
-
-      this.forElements(this.fixtureTemplates, function (fixtureTemplate) {
-        this.appendChild(fixtureTemplate);
-      }, this);
-
-      this.generatedDomStack = [];
-
-      this._elementsFixtured = false;
-
-      this.forcePolyfillAttachedStateSynchrony();
-    },
-
-    forcePolyfillAttachedStateSynchrony: function () {
-      // Force synchrony in attachedCallback and detachedCallback where
-      // implemented, in the event that we are dealing with one of these async
-      // polyfills:
-      // 1. Web Components CustomElements polyfill (v1 or v0).
-      if (window.customElements && window.customElements.flush) {
-        window.customElements.flush();
-      } else if (window.CustomElements && window.CustomElements.takeRecords) {
-        window.CustomElements.takeRecords();
-      }
-      // 2. ShadyDOM polyfill.
-      if (window.ShadyDOM && window.ShadyDOM.flush) {
-        window.ShadyDOM.flush();
-      }
-    },
-
-    collectElementChildren: function (parent) {
-      // Note: Safari 7.1 does not support `firstElementChild` or
-      // `nextElementSibling`, so we do things the old-fashioned way:
-      var elements = [];
-      var child = parent.firstChild;
-
-      while (child) {
-        if (child.nodeType === Node.ELEMENT_NODE) {
-          elements.push(child);
-        }
-
-        child = child.nextSibling;
-      }
-
-      return elements;
-    },
-
-    removeElements: function (elements) {
-      this.forElements(elements, function (element) {
-        this.removeChild(element);
-      }, this);
-    },
-
-    forElements: function (elements, iterator, context) {
-      Array.prototype.slice.call(elements)
-        .forEach(iterator, context);
-    },
-
-    stamp: function (fixtureTemplate, model) {
-      var stamped;
-      // Check if we are dealing with a "stampable" `<template>`. This is a
-      // vaguely defined special case of a `<template>` that is a custom
-      // element with a public `stamp` method that implements some manner of
-      // data binding.
-      if (fixtureTemplate.stamp) {
-        stamped = fixtureTemplate.stamp(model);
-        // We leak Polymer specifics a little; if there is an element `root`, we
-        // want that to be returned.
-        stamped = stamped.root || stamped;
-
-      // Otherwise, we fall back to standard HTML templates, which do not have
-      // any sort of binding support.
-      } else {
-        if (model) {
-          console.warn(this, 'was given a model to stamp, but the template is not of a bindable type');
-        }
-
-        stamped = document.importNode(fixtureTemplate.content, true);
-
-        // Immediately upgrade the subtree if we are dealing with async
-        // Web Components polyfill.
-        // https://github.com/Polymer/polymer/blob/0.8-preview/src/features/mini/template.html#L52
-        if (window.CustomElements && window.CustomElements.upgradeSubtree) {
-          window.CustomElements.upgradeSubtree(stamped);
-        }
-      }
-
-      return stamped;
-    }
-  };
-
-  Object.getOwnPropertyNames(TestFixtureExtension)
-    .forEach(function (property) {
-      Object.defineProperty(
-        TestFixturePrototype,
-        property,
-        Object.getOwnPropertyDescriptor(TestFixtureExtension, property)
-      );
-    });
-
-  try {
-    if (window.customElements) {
-      function TestFixture() {
-        return ((window.Reflect && Reflect.construct) ?
-            Reflect.construct(HTMLElement, [], TestFixture)
-            : HTMLElement.call(this)) || this;
-      }
-      TestFixture.prototype = TestFixturePrototype;
-      // `constructor` is not writable on Safari 9, but is configurable.
-      Object.defineProperty(TestFixture.prototype, 'constructor', {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        value: TestFixture,
-      });
-      window.customElements.define('test-fixture', TestFixture);
-    } else {
-      document.registerElement('test-fixture', {
-        prototype: TestFixturePrototype
-      });
-    }
-  } catch (e) {
-    if (window.WCT) {
-      console.warn('if you are using WCT, you do not need to manually import test-fixture.html');
-    } else {
-      console.warn('test-fixture has already been registered!');
-    }
-  }
-})();
-</script>

@@ -1,0 +1,49 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+
+<dom-module id="hoofd-menu">
+    <template>
+        <style>
+            h1 {
+                font-family: Roboto, sans-serif;
+                font-weight: lighter;
+                margin-bottom: 64px;
+                margin-top: 48px !important;
+            }
+
+            paper-button {
+                display: block;
+            }
+        </style>
+        <h1>Hoofdmenu</h1>
+        <iron-selector selected="[[page]]" attr-for-selected="name" role="navigation">
+            <a name="toevoegen-gerecht" href="[[rootPath]]toevoegen-gerecht">
+                <paper-button>Gerecht toevoegen</paper-button>
+            </a>
+            <a name="verwijderen-gerecht" href="[[rootPath]]verwijderen-gerecht">
+                <paper-button>Gerecht verwijderen</paper-button>
+            </a>
+            <a name="beschikbaarheid-aanpassen" href="[[rootPath]]beschikbaarheid-aanpassen">
+                <paper-button>Beschikbaarheid aanpasssen</paper-button>
+            </a>
+            <a name="toevoegen-aan-menu" href="[[rootPath]]toevoegen-aan-menu">
+                <paper-button>Toevoegen aan menu</paper-button>
+            </a>
+            <a name="verwijderen-van-menu" href="[[rootPath]]verwijderen-van-menu">
+                <paper-button>Verwijderen van menu</paper-button>
+            </a>
+        </iron-selector>
+    </template>
+
+    <script>
+        class Hoofdmenu extends Polymer.Element {
+            static get is() { return 'hoofd-menu' }
+        }
+
+        window.customElements.define(Hoofdmenu.is, Hoofdmenu)
+    </script>
+</dom-module>

@@ -1,0 +1,124 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-dialog/paper-dialog.html">
+<link rel="import" href="../../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
+
+<dom-module id="toevoegen-aan-menu">
+    <template>
+        <style>
+            h1 {
+                font-family: Roboto, sans-serif;
+                font-weight: lighter;
+                margin-bottom: 64px;
+                margin-top: 48px !important;
+            }
+
+            table {
+                font-family: Roboto, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            td, th {
+                border: 1px solid #ddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            .ja {
+                margin-left: 144px;
+            }
+
+            table paper-button {
+                text-transform: none !important;
+            }
+        </style>
+        <h1>Toevoegen aan menu</h1>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Gerecht</th>
+                <th>Op menu</th>
+                <th>Bestelbaar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <template is="dom-repeat" filter="staatNietOpMenu" items="{{gerechten}}" as="gerecht">
+                <tr>
+                    <td>
+                        <paper-button text-transform="none" on-click="toevoegenAanMenu" id="[[gerecht.gerecht]]">
+                            [[gerecht.gerecht]]
+                        </paper-button>
+                    </td>
+                    <td>[[gerecht.opMenu]]</td>
+                    <td>[[gerecht.beschikbaar]]</td>
+                </tr>
+            </template>
+            </tbody>
+        </table>
+
+        <paper-dialog id="dialoogvenster">
+            <h2>Weet u zeker dat u het gerecht wilt toevoegen aan het menu?</h2>
+            <paper-button class="ja" on-click="zekerButtonJa" dialog-confirm raised autofocus>Ja</paper-button>
+            <paper-button on-click="zekerButtonNee" dialog-confirm raised autofocus>Nee</paper-button>
+        </paper-dialog>
+
+        <iron-selector selected="[[page]]" attr-for-selected="name" role="navigation">
+            <a name="hoofd-menu" href="[[rootPath]]hoofd-menu">
+                <paper-button>Terug</paper-button>
+            </a>
+        </iron-selector>
+
+        <app-localstorage-document key="meta" data="{{gerechten}}"></app-localstorage-document>
+    </template>
+    <script>
+        class ToevoegenAanMenu extends Polymer.Element {
+            static get is() { return 'toevoegen-aan-menu' }
+            static get properties() {
+                return {
+                    gerechten: {
+                        type: Array,
+                        value: [
+                            {gerecht: "Patat", opMenu: "Nee", beschikbaar: "Ja"}
+                        ]
+                    }
+                }
+            }
+
+            staatNietOpMenu(item) {
+                return item.opMenu == "Nee" && item.beschikbaar == "Nee";
+            }
+
+            toevoegenAanMenu(event) {
+                this.$.dialoogvenster.open();
+                this.targetId = event.target.id;
+            }
+
+            zekerButtonJa() {
+                for (var i = 0; i < this.get(['gerechten']).length; i++) {
+                    var arrayItem = this.get(['gerechten', i]);
+                    if (this.targetId == arrayItem.gerecht) {
+
+
+                        this.set('gerechten.0', {
+                            gerecht: arrayItem.gerecht,
+                            opMenu: arrayItem.opMenu = "Ja",
+                            beschikbaar: arrayItem.beschikbaar = "Ja"
+                        });
+                    }
+                }
+            }
+
+            zekerButtonNee() {
+                this.$.dialoogvenster.close();
+            }
+        }
+
+        window.customElements.define(ToevoegenAanMenu.is, ToevoegenAanMenu)
+    </script>
+</dom-module>
