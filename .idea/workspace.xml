@@ -2,222 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41b56179-3928-435f-bbcc-7bb726dfb0b0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/.github/CODEOWNERS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/.github/ISSUE_TEMPLATE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/CONTRIBUTING.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-location.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-location.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route-converter-behavior.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route-converter-behavior.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route-converter.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route-converter.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/app-route.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/data-loading-demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/data-loading-demo/flickr-image-page.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/data-loading-demo/flickr-search-demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/data-loading-demo/flickr-search-page.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/simple-demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/route-info.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/search-results.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/video-viewer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/youtube-lite.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/youtube-search.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/demo/youtube-demo/youtube-toolbar.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/app-example-1.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/app-location.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/app-route-converter.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/app-route.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/observer-tester.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/redirection.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/test-app-example-1.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-route/test/test-observer-app.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/.github/CODEOWNERS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/.github/ISSUE_TEMPLATE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/CONTRIBUTING.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror-client.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror-client.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror-worker.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror-worker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/common-worker-scope.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/common-worker-scope.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/common-worker.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-indexeddb-mirror/common-worker.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-localstorage/app-localstorage-document.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-localstorage/app-localstorage-document.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-network-status-behavior.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-network-status-behavior.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-storage-behavior.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/app-storage-behavior.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/app-indexeddb-mirror/app-indexeddb-mirror.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/app-indexeddb-mirror/helpers.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/app-localstorage/app-localstorage-document.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/app-storage-compatibility-suite.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/feature-detect.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/app-storage/test/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-flex-layout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-shadow-flex-layout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/.github/CODEOWNERS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/.github/ISSUE_TEMPLATE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/CONTRIBUTING.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/demo/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/demo/iron-query-params.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-location.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-location.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-query-params.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-query-params.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-cases.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-iframe.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-tests.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/integration.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/iron-location-base-uri.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/iron-location.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/iron-query-params.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/redirection.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.github/CODEOWNERS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.github/ISSUE_TEMPLATE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/.travis.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/CONTRIBUTING.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/demo/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/hero.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/iron-pages.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/iron-pages.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/test/attr-for-selected.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/test/basic.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/test/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/test/nested-pages.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/iron-pages/test/nested.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/animated-grid.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/fullsize-page-with-card.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/reprojected-pages.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/.jshintrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/page.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/page/rollup.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/paper-dialog-behavior/paper-dialog-common.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/paper-styles/classes/shadow-layout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/polymer/lib/mixins/disable-upgrade-mixin.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/polymer/types/lib/mixins/disable-upgrade-mixin.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/.bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/CONTRIBUTING.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/COPYING" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/History.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/docs/examples.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/docs/experimental.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/docs/support.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/externs/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations-next.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/animation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply-preserving-inline-style.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/box-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/color-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/deprecation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/dev.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/dimension-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/effect-callback.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/element-animatable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/font-weight-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/group-constructors.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/handler-utils.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/interpolation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect-constructor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-interpolations.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-decomposition.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-interpolation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/normalize-keyframes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/number-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/position-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-interpolation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-names.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/scope.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/shadow-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/shape-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/tick.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/timeline.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/timing-utilities.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/transform-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/visibility-handler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-cancel-events.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-object-form-keyframes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-next-animation.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/.github/CODEOWNERS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/closure-output.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/doc/FunctioneelOntwerpDaim.pdf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/hoofd-menu.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/sushi-app.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/toevoegen-gerecht.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/verwijderen-gerecht.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change beforePath="$PROJECT_DIR$/bower_components/sinon-chai/.eslintrc.json" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/.eslintrc.json" />
-      <change beforePath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture.html" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture.html" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change beforePath="$PROJECT_DIR$/main.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
-      <change beforePath="$PROJECT_DIR$/src/auiproject-app/auiproject-app.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/gerecht-verwijderen/gerecht-verwijderen.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/auiproject-app/auiproject-app_test.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/auiproject-app/auiproject-app_test.html" afterPath="$PROJECT_DIR$/test/sushi-app/sushi-app_test.html" />
-      <change beforePath="$PROJECT_DIR$/verwijderen.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html" afterPath="$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html" />
+      <change beforePath="$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html" afterPath="$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html" />
+      <change beforePath="$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html" afterPath="$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -227,16 +15,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="0">
-                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="675">
+      <file leaf-file-name="beschikbaarheid-aanpassen.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1997">
+              <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verwijderen-van-menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="verwijderen-gerecht.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/verwijderen-gerecht.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3811">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toevoegen-gerecht.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/toevoegen-gerecht.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1469">
+              <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toevoegen-aan-menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1315">
+              <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sushi-app.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/sushi-app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2765">
+              <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hoofd-menu.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sushi-app/hoofd-menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="960">
+              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,10 +91,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html" />
+        <option value="$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html" />
+        <option value="$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html" />
+        <option value="$PROJECT_DIR$/src/sushi-app/hoofd-menu.html" />
       </list>
     </option>
   </component>
@@ -261,8 +115,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="96" />
-    <option name="y" value="162" />
+    <option name="x" value="1711" />
+    <option name="y" value="-34" />
     <option name="width" value="1942" />
     <option name="height" value="1088" />
   </component>
@@ -281,36 +135,39 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="voorraad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="voorraad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="voorraad" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="voorraad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="voorraad" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="voorraad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="voorraad" type="b2602c69:ProjectViewProjectNode" />
-              <item name="voorraad" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sushi-app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="voorraad" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sushi-app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -330,6 +187,89 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -344,33 +284,44 @@
       <option name="presentableId" value="Default" />
       <updated>1522015321124</updated>
       <workItem from="1522015322339" duration="402000" />
+      <workItem from="1522242168414" duration="1013000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="402000" />
+    <option name="totallyTimeSpent" value="1415000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1456" extended-state="6" />
+    <frame x="-14" y="-14" width="3868" height="2188" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18789062" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20732984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28046876" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298193" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,46 +335,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/auiproject-app/auiproject-app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sushi-app/sushi-app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1077">
-          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sushi-app/hoofd-menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="22" column="86" lean-forward="true" selection-start-line="22" selection-start-column="86" selection-end-line="22" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -432,6 +343,90 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/auiproject-app/auiproject-app.html" />
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="59" column="14" lean-forward="false" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/verwijderen-van-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="95" column="42" lean-forward="false" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/verwijderen-gerecht.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3811">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/toevoegen-gerecht.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1469">
+          <caret line="106" column="42" lean-forward="true" selection-start-line="106" selection-start-column="42" selection-end-line="106" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/toevoegen-aan-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1315">
+          <caret line="73" column="16" lean-forward="true" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/sushi-app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2765">
+          <caret line="93" column="8" lean-forward="false" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/hoofd-menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sushi-app/beschikbaarheid-aanpassen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1997">
+          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
